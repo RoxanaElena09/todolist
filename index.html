@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom & Do</title>
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+  <main class="app">
+    <h1>🌷 Bloom & Do</h1>
+    <p class="subtitle">
+      Organise tes tâches simplement, sans distraction.
+    </p>
+
+    <form id="todoForm">
+      <label class="input-label" for="taskInput">Ajouter une nouvelle tâche</label>
+      <div class="input-row">
+        <input
+          type="text"
+          id="taskInput"
+          name="task"
+          autocomplete="off"
+          required
+          aria-describedby="taskHelp"
+        />
+        <button type="submit" class="add-btn">Ajouter</button>
+      </div>
+      <p id="taskHelp" class="visually-hidden">
+        Saisis une tâche puis appuie sur le bouton Ajouter ou sur la touche Entrée.
+      </p>
+    </form>
+
+    <div
+      id="statusMessage"
+      class="status-message"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <ul id="taskList" class="task-list" aria-label="Liste des tâches"></ul>
+
+    <p id="emptyMessage" class="empty-message">
+      Aucune tâche pour le moment 🌸
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
